@@ -1,0 +1,20 @@
+{
+  "name": "horrorscopes",
+  "version": "1.0.0",
+  "description": "fun app to generate a horrorscope for the user and also to peruse other signs. daily horrorscope can be saved to the abyss (user dashboard), and commented on, edited, or deleted.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atticus-Robinson/Horrorscope.git"
+  },
+  "author": "katelyn armstrong, atticus robinson, lucas rodgers, bridgett valet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atticus-Robinson/Horrorscope/issues"
+  },
+  "homepage": "https://github.com/Atticus-Robinson/Horrorscope#readme"
+}
