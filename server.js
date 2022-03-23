@@ -1,23 +1,24 @@
+// dependencies
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const routes = require('./controllers');
 
+// middleware
 const app = express();
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(
-    'listening now on port 3001'))
-
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({ helpers });
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-
 // establish session rules
 const sess = {
-  secret: "secretSquirrel",
+  secret: 'secretSquirrel',
   cookie: {
     // end session on idle for 10 minutes
-    expires: 10 * 60 * 1000,
+    expires: 10 * 60 * 1000
   },
   resave: true,
   rolling: true,
@@ -27,22 +28,18 @@ const sess = {
   }),
 };
 
-
+// set express rules
+app.use(routes);
 app.use(session(sess));
-
-const helpers = require('./utils/helpers');
-
-const hbs = exphbs.create({ helpers });
-
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.use(require('./controllers/'));
+// set handlebar connection
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
+// connect database to server using Sequelize
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`Ready to rock on port 3001.`));
 });
