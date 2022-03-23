@@ -35,4 +35,4 @@ https://github.com/Atticus-Robinson/Horrorscope
 ## Screenshot
 ---------------------
 
-test by BV.
+test by BV
