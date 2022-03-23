@@ -1,0 +1,23 @@
+/* main body styles */
+body {
+    background-image: url("../../images/home-bg-complete.jpg");
+    color: var(--white);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2; 
+  }
+
+/* sets horrorscopes logo width */
+img {
+    width: 35%;
+    float: left;
+}
+
+main {
+    width: 100%;
+}
+
+.cards-all {
+    padding: 10px;
+    margin-top: 10px;
+}
