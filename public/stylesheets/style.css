@@ -8,7 +8,7 @@ body {
   }
 
 /* sets horrorscopes logo width */
-img {
+.logo {
     width: 35%;
     float: left;
 }
@@ -17,11 +17,71 @@ main {
     width: 100%;
 }
 
-.cards-all {
-    gap: 5%;
-
+h1 {
+    text-align: left;
 }
 
-img .cards-all {
-    max-height: 10%;
+h2 {
+    font-size: 1.4rem;
 }
+
+.cards-container {
+    width: 80%;
+}
+/* .cards-all {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+} */
+/* .cards-all img {
+    width: 15%;
+    padding: 1%
+} */
+
+/* .row {
+    display: flex;
+    flex-wrap: wrap;
+
+} */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 8px;
+    max-width: 16%;
+    flex: 16%;
+    float: left;
+    padding-right: 2%;
+}
+
+.cards img {
+    padding-bottom: 6%;
+}
+
+.cards p {
+    font-family: "IM Fell English";
+    margin-top: -4%;
+}
+
+.column {
+    flex: 100%;
+    max-width: 100%;
+    padding-left: 5%;
+    justify-content: center;
+}
+
+.column img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+/* @media screen and (max-width: 800px) {
+    .column img {
+        vertical-align: middle;
+        flex: 45%;
+        max-width: 45%;
+        padding-left: 5%;
+    }
+} */
