@@ -18,6 +18,10 @@ main {
 }
 
 .cards-all {
-    padding: 10px;
-    margin-top: 10px;
+    gap: 5%;
+
+}
+
+img .cards-all {
+    max-height: 10%;
 }
