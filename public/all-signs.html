@@ -10,10 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <script src="https://kit.fontawesome.com/2802beb58a.js" crossorigin="anonymous"></script>
 
     <!-- adds google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,17 +26,52 @@
   </head>
 
   <body>
-    <header>
-      <div class="my-4 mx-4">
+    <header class="main-header">
+      <div class="container">
+        <h1 class="mh-logo">
+          <img src="../images/logo.png" alt="HORRORSCOPES logo">
+        </h1>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li>
+              <a class="nav-link active" href="/all-signs.html">ALL SIGNS</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/abyss.html">THE ABYSS</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/daily-reading.html">DAILY READING</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/logged-out.html">LOGOUT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top mx-5">
+      <a class="bavbar-brand" href="#">
         <img
           src="../images/logo.png"
           class="mw-100 logo"
           alt="HORRORSCOPES logo"
         />
-      </div>
+      </a> -->
 
-      <nav>
-        <ul class="nav justify-content-end">
+      <!-- <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+
+      <!-- <div class="collapse navbar" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link active" href="/all-signs.html">ALL SIGNS</a>
           </li>
@@ -47,59 +79,97 @@
             <a class="nav-link" href="/abyss.html">THE ABYSS</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/daily-reading.html">DAILY READING</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/logged-out.html">LOGOUT</a>
           </li>
         </ul>
+      </div>
+    </nav> -->
+
+    <!-- <header class="d-flex">
+      <div class="mr-auto p-2">
+        <img
+          src="../images/logo.png"
+          class="mw-100 logo"
+          alt="HORRORSCOPES logo"
+        />
+      </div>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="/all-signs.html">ALL SIGNS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/abyss.html">THE ABYSS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/daily-reading.html">DAILY READING</a>
+        </li>          
+        <li class="nav-item">
+          <a class="nav-link" href="/logged-out.html">LOGOUT</a>
+        </li>
+      </ul>
+    </header> -->
+
+    <!-- <header>
+      <nav>
+       <div class="nav-wrapper">
+         <a href="index.html"><img src="../images/logo.png" class="brand-logo" alt="HORRORSCOPES logo"/></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <li><a href="/abyss.html">THE ABYSS</a></li>
+           <li><a href="/daily-reading.html">DAILY READING</a></li>
+           <li><a href="/logged-out.html">LOGOUT</a></li>
+          </ul>     
       </nav>
-    </header>
+    </header> -->
     <!-- 
    col-12 col-md-10 d-flex flex-column container-fluid mx-4
    cards-all row justify-content-center col-12 col-md-10 col-xl-6 mb-4
    cards-all d-flex flex-column container-fluid
   
   -->
-    <div style="clear: both"></div>
-    <main class="">
-      <h1 class="my-3 mx-4">ALL SIGNS</h1>
-      <section class="">
+
+    <main class="container">
         <div class="row justify-content-center p-3">
-          <div class="column">
-            <div class="cards">
+          <h1>ALL SIGNS</h1>
+          <div class="d-flex flex-wrap justify-content-center column">
+            <div class="cards p-1">
               <img src="../images/cards/taurus.png" alt="taurus card" />
               <h2>DATES</h2>
               <p>APR 20 - MAY 20</p>
               <h2>TRAITS</h2>
               <p>Strong, Dependable, Sensual & Creative.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/gemini.png" alt="gemini card" />
               <h2>DATES</h2>
               <p>MAY 21 - JUN 20</p>
               <h2>TRAITS</h2>
               <p>Versatile, Expressive, Curious & Kind.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/cancer.png" alt="cancer card" />
               <h2>DATES</h2>
               <p>JUN 21 - JUL 22</p>
               <h2>TRAITS</h2>
               <p>Intuitive, Sentimental, Compassionate & Protective.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/leo.png" alt="leo card" />
               <h2>DATES</h2>
               <p>JUL 23 - AUG 22</p>
               <h2>TRAITS</h2>
               <p>Dramatic, Outgoing, Fiery & Self-Assured.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/virgo.png" alt="virgo card" />
               <h2>DATES</h2>
               <p>AUG 23 - SEP 22</p>
               <h2>TRAITS</h2>
               <p>Practical, Loyal, Gentle & Analytical.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/libra.png" alt="libra card" />
               <h2>DATES</h2>
               <p>SEP 23 - OCT 22</p>
@@ -107,43 +177,46 @@
               <p>Social, Fair-Minded, Diplomatic & Gracious.</p>
             </div>
           </div>
-          <div class="column">
-            <div class="cards">
+          <div class="d-flex justify-content-center column">
+            <div class="cards p-1">
               <img src="../images/cards/scorpio.png" alt="scorpio card" />
               <h2>DATES</h2>
               <p>OCT 23 - NOV 21</p>
               <h2>TRAITS</h2>
               <p>Passionate, Stubborn, Resourceful & Brave.</p>
             </div>
-            <div class="cards">
-              <img src="../images/cards/sagittarius.png" alt="sagittarius card" />
+            <div class="cards p-1">
+              <img
+                src="../images/cards/sagittarius.png"
+                alt="sagittarius card"
+              />
               <h2>DATES</h2>
               <p>NOV 22 - DEC 21</p>
               <h2>TRAITS</h2>
               <p>Extroverted, Optimistic, Funny & Generous.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/capricorn.png" alt="capricorn card" />
               <h2>DATES</h2>
               <p>DEC 22 - JAN 19</p>
               <h2>TRAITS</h2>
               <p>Serious, Independent, Disciplined & Tenacious.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/aquarius.png" alt="aquarius card" />
               <h2>DATES</h2>
               <p>JAN 20 - FEB 18</p>
               <h2>TRAITS</h2>
               <p>Deep, Imaginative, Original & Uncompromising.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/pisces.png" alt="pisces card" />
               <h2>DATES</h2>
               <p>FEB 19 - MAR 20</p>
               <h2>TRAITS</h2>
               <p>Affectionate, Empathetic, Wise & Artistic.</p>
             </div>
-            <div class="cards">
+            <div class="cards p-1">
               <img src="../images/cards/aries.png" alt="aries card" />
               <h2>DATES</h2>
               <p>MAR 21 - APR 19</p>
@@ -152,16 +225,16 @@
             </div>
           </div>
         </div>
-      </section>
     </main>
 
     <!-- footer -->
-    <!-- <footer>
-      <h2>
-        Made with ❤ by Katelyn Armstrong, Atticus Robinson, Lucas Rodgers,
+    <footer>
+      <hr />
+      <h3>
+        Made with <i class="fa-solid fa-wand-magic-sparkles"></i> by Katelyn Armstrong, Atticus Robinson, Lucas Rodgers &
         Bridgett Valet
-      </h2>
-    </footer> -->
+      </h3>
+    </footer>
     <!-- footer end -->
   </body>
 </html>

@@ -1,87 +1,172 @@
+/* globals */
+:root {
+    --blue: #88d9fb;
+}
+
 /* main body styles */
 body {
-    background-image: url("../../images/home-bg-complete.jpg");
-    color: var(--white);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
-    line-height: 1.2; 
-  }
+  background-image: url('../../images/home-bg-complete.jpg');
+  color: var(--white);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
 
 /* sets horrorscopes logo width */
 .logo {
-    width: 35%;
-    float: left;
+  width: 40%;
 }
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
 h1 {
-    text-align: left;
+  text-align: left;
 }
 
 h2 {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 75%;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: #ffffff;
+  height: 1px;
+  opacity: 50%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Limit the container in width for big screens */
+.container {
+  width: 960px;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-nav ul {
+  margin: 1em 0 0.5em;
+  text-align: center;
+}
+.main-nav li {
+  display: inline;
+}
+.main-nav a {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  font-size: 1.3rem;
+}
+
+a {
+  padding: 1em;
+  color: white;
+}
+
+a:hover {
+    border: var(--blue) 2px solid;
+    border-radius: 15px;
+    color: var(--blue);
+    box-shadow: 0 0 15px var(--blue);
+}
+
+div {
+  border: 1px dotted crimson;
 }
 
 .cards-container {
-    width: 80%;
+  width: 80%;
 }
-/* .cards-all {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-} */
-/* .cards-all img {
-    width: 15%;
-    padding: 1%
-} */
-
-/* .row {
-    display: flex;
-    flex-wrap: wrap;
-
-} */
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    margin-top: 8px;
-    max-width: 16%;
-    flex: 16%;
-    float: left;
-    padding-right: 2%;
+  width: 15%;
 }
 
 .cards img {
-    padding-bottom: 6%;
+  padding-bottom: 6%;
 }
 
 .cards p {
-    font-family: "IM Fell English";
-    margin-top: -4%;
+  font-family: 'IM Fell English';
+  margin-top: -4%;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
-.column {
-    flex: 100%;
-    max-width: 100%;
-    padding-left: 5%;
-    justify-content: center;
+.cards2 p {
+  font-family: 'IM Fell English';
+  margin-top: -4%;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 .column img {
-    vertical-align: middle;
-    max-width: 100%;
+  max-width: 100%;
 }
 
-/* @media screen and (max-width: 800px) {
-    .column img {
-        vertical-align: middle;
-        flex: 45%;
-        max-width: 45%;
-        padding-left: 5%;
-    }
-} */
+.welcome {
+    background-color: azure;
+    opacity: 55%;
+    border-radius: 15px;
+}
+
+.serif-title {
+    font-family: 'IM Fell English';
+    font-size: 2.5rem;
+    color: black;
+}
+
+.dark-text {
+    color: black;
+    font-family: 'IM Fell English';
+    line-height: 200%;
+}
+
+/* media queries  */
+@media screen and (max-width: 866px) {
+  .column {
+    flex-wrap: wrap;
+  }
+  .cards {
+    width: 30%;
+  }
+  h1 {
+    text-align: center;
+    /* margin-top: 10%; */
+  }
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .column {
+    flex-wrap: wrap;
+  }
+  .cards {
+    width: 45%;
+  }
+}

@@ -4,38 +4,92 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- adds bootstrap & font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://kit.fontawesome.com/2802beb58a.js" crossorigin="anonymous"></script>
+
+
+<!-- adds google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+
+<!-- adds stylesheet -->
+    <link rel="stylesheet" href="./stylesheets/style.css" />
     <title>Horrorscopes</title>
   </head>
-  <body>
-    <header>
-      <h1>HORRORSCOPES</h1>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="/dailyReading.html"> Daily Reading</a>
-          </li>
-          <li>
-            <a href="/abyss.html"> The Abyss</a>
-          </li>
-          <li>
-            <a href="/allSigns.html">See All Signs</a>
-          </li>
-        </ul>
-      </nav>
+<!-- main body -->
+  <body>
+    <header class="main-header">
+      <div class="container">
+<!-- nav menu and logo -->
+        <h1 class="mh-logo">
+          <img src="../images/logo.png" alt="HORRORSCOPES logo" />
+        </h1>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li>
+              <a class="nav-link" href="/all-signs.html">ALL SIGNS</a>
+            </li>
+            <li>
+              <a class="nav-link active" href="/abyss.html">THE ABYSS</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/daily-reading.html">DAILY READING</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/logged-out.html">LOGOUT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <div>
-      <h2>Welcome to The Abyss! Please comment how awful your day has been in comparrison to your Horrorscope prediction.</h2>
-    </div>
-
-    <!-- footer -->
+<!-- main body and card containers -->
+    <main class="container">
+      <h1>THE ABYSS</h1>
+      <section class="">
+        <div class="row justify-content-center p-3">
+          <div class="d-flex flex-wrap justify-content-center">
+            <div class="p-1 col-4">
+              <img src="../images/cards/taurus.png" alt="taurus card" />
+            </div>
+            <div class="welcome col-8">
+              <h1 class="serif-title mt-3">Welcome. To The Abyss.</h1>
+              <p class="dark-text">
+                Consider The Abyss to be your personal, day-to-day way to keep
+                your thoughts on the day and universe at large in one place.
+                After you have saved your Daily Reading to your Dashboard, it
+                will appear here.
+              </p>
+              <p class="dark-text">
+                Add comments ("my aura was FAR from dim today"), edit your
+                comments or delete them altogether. Its your safe space, Taurus.
+                Make it your own.
+              </p>
+            </div>
+<!-- user saved data populates here -->
+            <div class="welcome col-4"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+<!-- footer -->
     <footer>
-      <h2>
-        Made with ❤ by Katelyn Armstrong, Atticus Robinson, Lucas Rodgers,
-        Bridgett Valet
-      </h2>
+      <hr />
+      <h3>
+        Made with <i class="fa-solid fa-wand-magic-sparkles"></i> by Katelyn Armstrong,
+        Atticus Robinson, Lucas Rodgers & Bridgett Valet
+      </h3>
     </footer>
-    <!-- footer end -->
+<!-- footer end -->
   </body>
 </html>
