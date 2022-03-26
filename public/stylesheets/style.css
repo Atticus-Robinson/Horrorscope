@@ -95,6 +95,7 @@ a:hover {
     border-radius: 15px;
     color: var(--blue);
     box-shadow: 0 0 15px var(--blue);
+    text-decoration: none;
 }
 
 div {
@@ -164,7 +165,7 @@ button:hover {
     color: var(--blue);
     border: var(--blue) 2px solid;
     border-radius: 5px;
-    text-decoration: none;
+
 }
 
 .serif-title2 {
