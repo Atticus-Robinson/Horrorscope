@@ -174,7 +174,6 @@ button:hover {
     font-family: 'IM Fell English';
 }
 
-
 /* media queries  */
 @media screen and (max-width: 866px) {
   .column {
@@ -205,6 +204,7 @@ button:hover {
 
 form {
     width: 350px;
+    margin-top: 30px;
   }
   
   form .form-field::before {
@@ -218,6 +218,8 @@ form {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+/* adds icons to login */
   form .form-field:nth-child(1)::before {
     background-image: url(../../images/user-icon.png);
     width: 20px;
@@ -229,8 +231,15 @@ form {
     background-image: url(../../images/lock-icon.png);
     width: 16px;
     height: 16px;
-
   }
+
+form .form-field:nth-child(3)::before {
+  background-image: url(../../images/cake-icon.png);
+  width: 16px;
+  height: 16px;
+}  
+
+
   form .form-field {
     display: -webkit-box;
     display: -ms-flexbox;
