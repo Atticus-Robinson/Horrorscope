@@ -4,31 +4,90 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horrorscopes</title>
+
+<!-- adds bootstrap & font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://kit.fontawesome.com/2802beb58a.js" crossorigin="anonymous"></script>
+
+
+<!-- adds google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+
+<!-- adds stylesheets -->
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <title>HORRORSCOPES</title>
   </head>
+
+<!-- header logo & nav -->
   <body>
-    <header>
-      <h1>HORRORSCOPES</h1>
+    <header class="main-header">
+      <div class="container">
+        <h1 class="mh-logo">
+          <img src="../images/logo.png" alt="HORRORSCOPES logo">
+        </h1>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li>
+              <a class="nav-link active" href="/all-signs.html">ALL SIGNS</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/abyss.html">THE ABYSS</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/daily-reading.html">DAILY READING</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/logged-out.html">LOGOUT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <div>
-      <h2>Create an account to see your daily Horrorscope!</h2>
-      <form>
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Password" />
-        <input type="date" placeholder="Enter Birthday" />
-
-        <button href=>See my Horrorscope!</button>
+<!-- login fields -->
+<main class = "container">
+  <section class="row justify-content-center d-flex flex-wrap">
+    <div class="col-12 col-lg-4 welcome main d-flex flex-wrap">
+      <form class="justify-content-center">
+        <div class="form-field">
+          <input type="email" placeholder="Email" required />
+        </div>
+        <div class="form-field">
+          <input type="password" placeholder="Password" required />
+        </div>
+        <div class="form-field">
+          <input type="birthday" placeholder="Birthday {{ mm/dd/yyyy }}" required />
+        </div>
+        <div class="form-field">
+          <button class="btn" type="submit">Sign Up</button>
+        </div>
       </form>
-    </div>
+   </div>
+   <div class col-12 col-lg-8>
+    <!-- card image on right -->
+          <img class="mx-2" src="../images/card-comp.png" alt="group of tarot-style horrorscope cards" />
+        </div>
+  </section>
+</main>
 
-    <!-- footer -->
+<!-- footer -->
     <footer>
-      <h2>
-        Made with ❤ by Katelyn Armstrong, Atticus Robinson, Lucas Rodgers,
-        Bridgett Valet
-      </h2>
+      <hr />
+      <h3>
+        Made with <i class="fa-solid fa-wand-magic-sparkles"></i> by Katelyn Armstrong, Atticus Robinson, Lucas Rodgers & Bridgett Valet
+      </h3>
     </footer>
-    <!-- footer end -->
+<!-- footer end -->
   </body>
 </html>
