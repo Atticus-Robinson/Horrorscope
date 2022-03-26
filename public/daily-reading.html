@@ -4,41 +4,94 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horrorscopes</title>
-  </head>
-  <body>
-    <header>
-      <h1>HORRORSCOPES</h1>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="dailyReading.html"> Daily Reading</a>
-          </li>
-          <li>
-            <a href=> The Abyss</a>
-          </li>
-          <li>
-            <a href=>See All Signs</a>
-          </li>
-        </ul>
-      </nav>
+    <!-- adds bootstrap & font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://kit.fontawesome.com/2802beb58a.js" crossorigin="anonymous"></script>
+
+    <!-- adds google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- adds stylesheet -->
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <title>Daily Reading</title>
+  </head>
+
+<!-- begin logo & nav -->
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <h1 class="mh-logo">
+          <img src="../images/logo.png" alt="HORRORSCOPES logo">
+        </h1>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li>
+              <a class="nav-link active" href="/all-signs.html">ALL SIGNS</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/abyss.html">THE ABYSS</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/daily-reading.html">DAILY READING</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/logged-out.html">LOGOUT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <section>
-      <div class="dailyReading">
-        <h2>Today you will experience...</h2>
-        <button>Send to The Abyss</button>
+<!-- daily reading -->
+<main class="container">
+  <h1>DAILY READING</h1>
+  <section class="">
+    <div class="row justify-content-center p-3">
+      <div class="d-flex flex-wrap justify-content-center">
+        <div class="p-1 col-4">
+<!-- TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE -->
+          <img src="../images/cards/virgo.png" alt="virgo card" />
+        </div>
+        <div class="welcome col-8">
+          <h1 class="serif-title mt-3">`Hello, ${usersign}`</h1>
+          <p class="dark-text">
+<!-- TODO: INSERT LOGGED IN USER SIGN DATES HERE (SHOULD I BUILD A DATABASE FOR SIGNS/DATES?-->
+            August 23 - September 11
+          </p>
+          <p class="dark-text">
+            Your Star Rating for the Day: 
+<!-- TODO: INSERT RANDOMLY GENERATED STAR RATING HERE -->
+          </p>
+<!-- TODO: INSERT RANDOMLY GENERATED HORRORSCOPE HERE (HOOK TO API?) -->
+          <p class="dark-text">
+            I know that you are pissed off and stressed out this week, but your revenge tactics suck when you are not thinking clearly. You’ve kept this problem inside for too long. So long, it’s been scratching at your bad side and it now starting to really itch. It’s time to finally get it off your chest and talk about it. I know that you would rather destroy something, but if you don’t solve the problem this week, it will be twice as bad next week! 
+          </p>
+<!-- TODO: WHY IS THIS BUTTON TRANSPARENT AS WELL?! -->
+          <button>
+            SAVE TO DASHBOARD
+          </button>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <!-- footer -->
-    <footer>
-      <h2>
-        Made with ❤ by Katelyn Armstrong, Atticus Robinson, Lucas Rodgers,
-        Bridgett Valet
-      </h2>
-    </footer>
-    <!-- footer end -->
+<!-- footer -->
+  <footer>
+    <hr />
+    <h3>
+      Made with <i class="fa-solid fa-wand-magic-sparkles"></i> by Katelyn Armstrong, Atticus Robinson, Lucas Rodgers & Bridgett Valet
+    </h3>
+  </footer>
+<!-- footer end -->
   </body>
 </html>
