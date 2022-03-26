@@ -95,6 +95,7 @@ a:hover {
     border-radius: 15px;
     color: var(--blue);
     box-shadow: 0 0 15px var(--blue);
+    text-decoration: none;
 }
 
 div {
@@ -132,8 +133,7 @@ div {
 }
 
 .welcome {
-    background-color: azure;
-    opacity: 55%;
+    background: rgba(240, 255, 255, .55);
     border-radius: 15px;
 }
 
@@ -165,6 +165,7 @@ button:hover {
     color: var(--blue);
     border: var(--blue) 2px solid;
     border-radius: 5px;
+
 }
 
 .serif-title2 {
