@@ -98,6 +98,11 @@ a:hover {
     text-decoration: none;
 }
 
+.no-border:hover {
+  border: none !important;
+  box-shadow: none;
+}
+
 div {
   border: 1px dotted crimson;
 }
