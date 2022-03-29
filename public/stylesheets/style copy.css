@@ -84,6 +84,7 @@ img {
   padding: 0.5em 1.5em;
   font-size: 1.3rem;
 }
+
 a {
   padding: 1em;
   color: white;
@@ -169,6 +170,7 @@ button:hover {
     color: var(--blue);
     border: var(--blue) 2px solid;
     border-radius: 5px;
+
 }
 
 .serif-title2 {
@@ -223,6 +225,7 @@ form {
     background-repeat: no-repeat;
   }
 
+/* adds icons to login */
   form .form-field:nth-child(1)::before {
     background-image: url(../../images/user-icon.png);
     width: 20px;
@@ -241,6 +244,8 @@ form .form-field:nth-child(3)::before {
   width: 16px;
   height: 16px;
 }  
+
+
   form .form-field {
     display: -webkit-box;
     display: -ms-flexbox;
