@@ -6,6 +6,15 @@ router.get('/', (req, res) => {
   res.render('homepage2')
 })
 
+router.get('/daily-reading', (req, res) => {
+  console.log(req.session)
+  res.render('daily-reading', {
+   email: req.session.email,
+   username: req.session.username,
+   login: req.session.loggedIn 
+  })
+})
+
 // get all posts for homepage2
 // router.get('/', (req, res) => {
 //   console.log('======================');
