@@ -1,36 +1,11 @@
-    <header class="main-header">
-      <div class="container">
-<!-- nav menu and logo -->
-        <h1 class="mh-logo">
-         <a class="no-border" href="index.html"><img src="../images/logo.png" alt="HORRORSCOPES logo" /></a>
-        </h1>
-        <nav class="main-nav">
-          <ul class="main-nav-list">
-            <li>
-              <a class="nav-link" href="all-signs.html">ALL SIGNS</a>
-            </li>
-            <li>
-              <a class="nav-link active" href="abyss.html">THE ABYSS</a>
-            </li>
-            <li>
-              <a class="nav-link" href="daily-reading.html">DAILY READING</a>
-            </li>
-            <li>
-              <a class="nav-link" href="logged-out.html">LOGOUT</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-<!-- main body and card containers -->
+{{!-- main body and card containers --}}
     <main class="container">
+      <div class="row justify-content-center p-3">
       <h1>THE ABYSS</h1>
-      <section class="">
         <div class="row justify-content-center p-3">
           <div class="d-flex flex-wrap justify-content-center">
             <div class="p-1 col-4">
-<!-- TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE -->
+{{!--  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  --}}
               <img src="../images/cards/taurus.png" alt="taurus card" />
             </div>
             <div class="welcome col-8">
@@ -41,25 +16,16 @@
                 After you have saved your Daily Reading to the Abyss, it
                 will appear here.
               </p>
-<!-- TODO: MAKE SURE LOGGED IN USER SIGN POPULATES THE {{ }} -->
+{{!--  TODO: MAKE SURE LOGGED IN USER SIGN POPULATES --}}
               <p class="dark-text">
-                Add comments ("my aura was FAR from dim today"), edit your
-                comments or delete them altogether. Its your safe space,  {{ Taurus }}.
+                Add comments ("My aura was FAR from dim today!"), edit your
+                comments or delete them altogether. Its your safe space.
                 Make it your own.
               </p>
             </div>
-<!-- TODO: SAVED USER DATA GOES HERE -->
+            </div>
+{{!--  TODO: SAVED USER DATA GOES HERE  --}}
             <div class="welcome col-4"></div>
           </div>
         </div>
-      </section>
     </main>
-<!-- footer -->
-    <footer>
-      <hr />
-      <h3>
-        Made with <i class="fa-solid fa-wand-magic-sparkles"></i> by Katelyn Armstrong,
-        Atticus Robinson, Lucas Rodgers & Bridgett Valet
-      </h3>
-    </footer>
-<!-- footer end -->

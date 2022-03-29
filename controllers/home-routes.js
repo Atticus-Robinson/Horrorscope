@@ -15,6 +15,14 @@ router.get('/daily-reading', (req, res) => {
   })
 })
 
+router.get('/all-signs', (req, res) => {
+  res.render('all-signs')
+})
+
+router.get('/abyss', (req, res) => {
+  res.render('abyss')
+})
+
 // get all posts for homepage2
 // router.get('/', (req, res) => {
 //   console.log('======================');
