@@ -153,6 +153,10 @@ div {
     line-height: 200%;
 }
 
+p.bump-up {
+  margin-top: -20%;
+}
+
 button {
     background-color: var(--blue);
     border-radius: 5px;
