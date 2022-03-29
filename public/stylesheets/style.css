@@ -138,8 +138,7 @@ div {
 
 .welcome {
     background: rgba(240, 255, 255, .55);
-    background-color: azure;
-    opacity: 55%;
+    border-radius: 15px;
 }
 
 .serif-title {
