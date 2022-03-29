@@ -37,7 +37,11 @@ User.init(
       validate: {
         len: [4]
       }
-    }
+    },
+    birthday: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     hooks: {
