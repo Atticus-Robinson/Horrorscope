@@ -4,6 +4,9 @@ async function loginFormHandler(event) {
   const email = document.querySelector('#email1').value.trim();
   const password = document.querySelector('#pw1').value.trim();
 
+console.log(email)
+console.log(password)
+
   if (email && password) {
     const response = await fetch('/api/users/login', {
       method: 'post',
@@ -15,7 +18,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('daily-reading.html');
+      document.location.replace('/daily-reading');
     } else {
       alert(response.statusText);
     }
@@ -48,4 +51,4 @@ async function signupFormHandler(event) {
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+// document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);

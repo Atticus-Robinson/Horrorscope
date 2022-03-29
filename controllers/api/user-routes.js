@@ -4,7 +4,7 @@ const { User, Post, Comment } = require('../../models');
 // get all users
 router.get('/', (req, res) => {
   User.findAll({
-    attributes: { exclude: ['password'] }
+    // attributes: { exclude: ['password'] }
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -70,6 +70,9 @@ router.post('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
+
+  console.log(req.body)
+
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
@@ -77,6 +80,7 @@ router.post('/login', (req, res) => {
     }
   }).then(dbUserData => {
     if (!dbUserData) {
+      console.log('usernotfound')
       res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
@@ -84,12 +88,14 @@ router.post('/login', (req, res) => {
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
+      console.log('incorrect password')
       res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
 
     req.session.save(() => {
-      req.session.user_id = dbUserData.id;
+      req.session.email = dbUserData.email;
+      req.session.id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
   

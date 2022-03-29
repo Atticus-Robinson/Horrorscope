@@ -6,7 +6,7 @@ const seedSigns = require('./sign-seeds');
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
-  await sequelize.sync({ force: false });
+  await sequelize.sync({ force: true });
   console.log('------- DATABASE SYNCED ---------\n');
 
   await seedUsers();
