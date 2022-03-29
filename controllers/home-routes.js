@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   res.render('homepage2')
 })
 
-// get all posts for homepage
+// get all posts for homepage2
 // router.get('/', (req, res) => {
 //   console.log('======================');
 //   Post.findAll({

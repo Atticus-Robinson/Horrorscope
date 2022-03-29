@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// get all posts for dashboard
+// get all posts for abyss
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
@@ -34,7 +34,7 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('dashboard', { posts, loggedIn: true });
+      res.render('abyss', { posts, loggedIn: true });
     })
     .catch(err => {
       console.log(err);
