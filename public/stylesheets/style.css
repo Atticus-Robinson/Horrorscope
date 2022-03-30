@@ -36,6 +36,10 @@ h2 {
   text-align: center;
 }
 
+h2.left {
+  text-align: left;
+}
+
 h3 {
   font-size: 1.2rem;
   text-align: center;
@@ -158,7 +162,7 @@ a:hover {
   font-size: 1.2rem;
 }
 
-#star-height {
+.star-height {
   height: 5%;
 }
 
