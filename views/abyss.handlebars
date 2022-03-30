@@ -1,29 +1,61 @@
 {{! main body and card containers }}
-<main class='container'>
+<div class='container'>
   <h1>THE ABYSS</h1>
   <div class='row justify-content-center p-3'>
-    <div class='row justify-content-center p-3'>
-      <div class='d-flex flex-wrap justify-content-center'>
-        <div class='p-1 col-4'>
-          {{!  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  }}
-          <img src='../images/cards/taurus.png' alt='taurus card' />
-        </div>
-        <div class='welcome col-8'>
-          <h1 class='serif-title mt-3'>Welcome. To The Abyss.</h1>
-          <p class='dark-text'>
-            Consider The Abyss to be your personal, day-to-day way to keep your
-            thoughts on the day and universe at large in one place. After you
-            have saved your Daily Reading to the Abyss, it will appear here.
-          </p>
-          {{!  TODO: MAKE SURE LOGGED IN USER SIGN POPULATES }}
-          <p class='dark-text'>
-            Add comments ("My aura was FAR from dim today!"), edit your comments
-            or delete them altogether. Its your safe space. Make it your own.
-          </p>
-        </div>
+    <div class='d-flex flex-wrap justify-content-center'>
+      <div class='p-2 col-4'>
+        {{!  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  }}
+        <img src='../images/cards/taurus.png' alt='taurus card' />
+      </div>
+      <div class='welcome col-8'>
+        <h1 class='serif-title mt-3'>Welcome. To The Abyss.</h1>
+        <p class='dark-text'>
+          Consider The Abyss to be your personal, day-to-day way to keep your
+          thoughts on the day and universe at large in one place. After you have
+          saved your Daily Reading to the Abyss, it will appear here.
+        </p>
+        {{!  TODO: MAKE SURE LOGGED IN USER SIGN POPULATES }}
+        <p class='dark-text'>
+          Add comments ("My aura was FAR from dim today!"), edit your comments
+          or delete them altogether. Its your safe space. Make it your own.
+        </p>
       </div>
       {{!  TODO: SAVED USER DATA GOES HERE  }}
-      <div class='welcome col-4'></div>
+      <div class='welcome col-5 mt-3 mr-2'>
+        <h2 class='serif-title mt-3 left'>3.14.2022 @ 2:47p</h2>
+        <p class='dark-text'>
+          Your Star Rating for the Day:
+          <img
+            src='/images/two-star.png'
+            alt='two star day'
+            class='star-height'
+          /></p>
+        <p class='dark-text'>
+          Your car will begin pulling slightly to the center. Your paranoia is
+          justified. Your next career: Sad Clown Painter. You will develop an
+          attractive skin condition. Lately, life has been a box of cereal: all
+          bran, no marshmallows. That changes on Saturday, when someone new
+          shows up and excites all your fruity bits. You’ll even feel like
+          licking the spoon.
+        </p>
+        <button>COMMENTS</button>
+        <button class='mx-2'>DELETE</button>
+      </div>
+      <div class='welcome col-5 mt-3 ml-2'>
+        <h2 class='serif-title mt-3 left'>3.28.2022 @ 11:19a</h2>
+        <p class='dark-text'>
+          Your Star Rating for the Day:
+          <img
+            src='/images/four-star.png'
+            alt='four star day'
+            class='star-height'
+          /></p>
+        <p class='dark-text'>
+          You consider yourself a born leader. Others think you are an idiot. You are vain and cannot tolerate criticism. Your arrogance is disgusting. You are the reason butterfly hairpins and parachute pants have made a comeback. Don't sleep, Shriners want to eat you. If you want to connect with young folks, just provide them with solid wi-fi.
+        </p>
+        <button>COMMENTS</button>
+        <button class='mx-2'>DELETE</button>
+      </div>
+     </div>
     </div>
-  </div>
 </main>
