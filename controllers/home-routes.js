@@ -23,6 +23,14 @@ router.get('/abyss', (req, res) => {
   res.render('abyss')
 })
 
+router.get('/create-account', (req, res) => {
+  res.render('create-account')
+})
+
+router.get('/logout', (req, res) => {
+  res.render('/')
+})
+
 // get all posts for homepage2
 // router.get('/', (req, res) => {
 //   console.log('======================');

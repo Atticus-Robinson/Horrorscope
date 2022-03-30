@@ -137,7 +137,7 @@ a:hover {
 }
 
 .welcome {
-    background: rgba(240, 255, 255, .55);
+    background: rgba(240, 255, 255, .65);
     border-radius: 15px;
 }
 
@@ -151,6 +151,15 @@ a:hover {
     color: black;
     font-family: 'IM Fell English';
     line-height: 200%;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#star-height {
+  height: 5%;
 }
 
 p.bump-up {
