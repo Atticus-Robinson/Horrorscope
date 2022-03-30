@@ -1,6 +1,5 @@
 # Horrorscope
 
-=======
 ## Description
 ---------------------
 Whether it is your guilty pleasure or not, most people know what their astrology sign is and as general rule, the traits of their sign. 
@@ -35,3 +34,10 @@ https://horrorscopes-project.herokuapp.com/
 
 ## Screenshot
 ---------------------
+![Screen Shot 2022-03-29 at 8 52 34 PM](https://user-images.githubusercontent.com/93275108/160734862-816c0447-a0c6-479a-8c68-8e907682424f.png)
+
+<<<<<<< HEAD
+=======
+
+test by BV.
+>>>>>>> main

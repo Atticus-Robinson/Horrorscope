@@ -97,9 +97,14 @@ a:hover {
     text-decoration: none;
 }
 
-div {
-  border: 1px dotted crimson;
+.no-border:hover {
+  border: none !important;
+  box-shadow: none;
 }
+
+/* div {
+  border: 1px dotted crimson;
+} */
 
 .cards-container {
   width: 80%;
@@ -133,8 +138,7 @@ div {
 
 .welcome {
     background: rgba(240, 255, 255, .55);
-    background-color: azure;
-    opacity: 55%;
+    border-radius: 15px;
 }
 
 .serif-title {
@@ -147,6 +151,10 @@ div {
     color: black;
     font-family: 'IM Fell English';
     line-height: 200%;
+}
+
+p.bump-up {
+  margin-top: -20%;
 }
 
 button {

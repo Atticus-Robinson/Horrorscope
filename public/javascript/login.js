@@ -1,8 +1,11 @@
 async function loginFormHandler(event) {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const email = document.querySelector('#email1').value.trim();
+  const password = document.querySelector('#pw1').value.trim();
+
+console.log(email)
+console.log(password)
 
   if (email && password) {
     const response = await fetch('/api/users/login', {
@@ -15,7 +18,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard/');
+      document.location.replace('/daily-reading');
     } else {
       alert(response.statusText);
     }
@@ -25,15 +28,13 @@ async function loginFormHandler(event) {
 async function signupFormHandler(event) {
   event.preventDefault();
 
-  const username = document.querySelector('#username-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
-  if (username && email && password) {
+  if (email && password) {
     const response = await fetch('/api/users', {
       method: 'post',
       body: JSON.stringify({
-        username,
         email,
         password
       }),
@@ -41,7 +42,7 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard/');
+      document.location.replace('daily-reading.html');
     } else {
       alert(response.statusText);
     }
@@ -50,4 +51,4 @@ async function signupFormHandler(event) {
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+// document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
