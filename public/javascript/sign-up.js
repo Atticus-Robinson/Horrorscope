@@ -6,6 +6,10 @@ async function signupFormHandler(event) {
   const password = document.querySelector('#password-signup').value.trim();
   const birthday = document.querySelector('#birthday-signup').value.trim();
 
+  console.log(email);
+  console.log(password);
+  console.log(birthday);
+
   if (email && password && birthday) {
     const response = await fetch('/api/users', {
       method: 'post',
@@ -25,8 +29,6 @@ async function signupFormHandler(event) {
     }
   }
 }
-
-console.log(email)
 
 document
   .querySelector('.signup-form')
