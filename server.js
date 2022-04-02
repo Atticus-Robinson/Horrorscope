@@ -55,6 +55,7 @@ var transporter = nodemailer.createTransport({
      }
  });
 
+ //nodemailer
  const mailOptions = {
   from: 'horrorscope_project@outlook.com', // our email address
   to: '', // email addresss upon sign up. Pull from DataBase
