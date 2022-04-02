@@ -32,6 +32,7 @@ Props to the original horrific Zodiac sign artwork creator, Damon Hellandbrand.
 ## GitHub
 https://github.com/Atticus-Robinson/Horrorscope  
 
+<<<<<<< HEAD
 ## Deployed
 https://horrorscopes-project.herokuapp.com/
 
@@ -51,3 +52,18 @@ Encrypted Passwords
 
 ## Walkthrough
 https://drive.google.com/file/d/1fKtyaDHihfeGO4aavFIWHFeuzvFXfGLM/view
+=======
+## Deployed URL
+---------------------
+https://horrorscopes-project.herokuapp.com/
+
+## Screenshot
+---------------------
+![Screen Shot 2022-03-29 at 8 52 34 PM](https://user-images.githubusercontent.com/93275108/160734862-816c0447-a0c6-479a-8c68-8e907682424f.png)
+
+<<<<<<< HEAD
+=======
+
+test by BV.
+>>>>>>> main
+>>>>>>> develop-armstrong
