@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 class Horoscope extends Model {}
 Horoscope.init(
@@ -8,36 +8,36 @@ Horoscope.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     horoscope_text: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
-        len: [1],
-      },
+        len: [1]
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
-        key: "id",
-      },
+        model: 'user',
+        key: 'id'
+      }
     },
     sign_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "signs",
-        key: "id",
-      },
-    },
+        model: 'signs',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "horoscope",
+    modelName: 'horoscope'
   }
 );
 

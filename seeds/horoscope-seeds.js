@@ -39,6 +39,6 @@ const horoscopeData = [
   },
 ];
 
-const seedComments = () => Horoscope.bulkCreate(horoscopeData);
+const seedHoroscope = () => Horoscope.bulkCreate(horoscopeData);
 
-module.exports = seedComments;
+module.exports = seedHoroscope;
