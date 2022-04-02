@@ -57,7 +57,7 @@ var transporter = nodemailer.createTransport({
 
  const mailOptions = {
   from: 'horrorscope_project@outlook.com', // our email address
-  to: '', // email addresss upon sign up. Pull fro DB
+  to: '', // email addresss upon sign up. Pull from DataBase
   subject: 'Welcome to Horrorscopes', // Subject line
   html: '<p>Welcome to Horrorscopes! Please let us know what you think of our application as well as other features you would like to see in a future update.</p>'// plain text body
 };
@@ -66,5 +66,5 @@ transporter.sendMail(mailOptions, function (err, info) {
   if(err)
     console.log(err)
   else
-    console.log(info);
+    console.log(info); 
 });
