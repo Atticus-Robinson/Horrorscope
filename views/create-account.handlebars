@@ -2,18 +2,21 @@
 <main class = "container">
   <section class="row justify-content-center d-flex flex-wrap">
     <div class="col-12 col-lg-4 welcome main d-flex flex-wrap">
-      <form class="login-form justify-content-center">
+      <form class="signup-form justify-content-center">
         <div class="form-field">
-          <input class="email1" type="email" placeholder="Email" required />
+          <input id="email-signup" class="email1" type="email" placeholder="Email" required />
+        </div>
+         <div class="form-field">
+          <input id="username-signup" class="username1" type="text" placeholder="Username" required />
         </div>
         <div class="form-field">
-          <input class="pw1" type="password" placeholder="Password" required />
+          <input id="password-signup" class="pw1" type="password" placeholder="Password" required />
         </div>
         <div class="form-field">
           <input id="birthday-signup" type="date" placeholder="Birthday {{ mm/dd/yyyy }}" required />
         </div>
         <div class="form-field">
-          <button class="btn" type="submit">Sign Up</button>
+          <button id="signup" class="btn" type="submit">Sign Up</button>
         </div>
       </form>
    </div>
@@ -24,4 +27,4 @@
   </section>
 </main>
 
-<script src="./javascript/login.js"></script>
+<script src="/javascript/sign-up.js"></script>
