@@ -48,7 +48,7 @@ sequelize.sync({ force: false }).then(() => {
 
 //nodemailer transporter
 var transporter = nodemailer.createTransport({
-  service: 'outlook',
+  service: 'outlook', //verify domain
   auth: {
          user: 'horrorscope_project@outlook.com',
          pass: 'horrorscopes*123'
