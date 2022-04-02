@@ -51,7 +51,6 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234', birthday: 10081978}
   User.create({
-    username: req.body.username,
     email: req.body.email,
     password: req.body.password,
     birthday: req.body.birthday
@@ -59,7 +58,6 @@ router.post('/', (req, res) => {
     .then(dbUserData => {
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
         req.session.loggedIn = true;
         req.session.birthday = dbUserData.birthday;
   
@@ -75,7 +73,6 @@ router.post('/', (req, res) => {
 router.post('/create-account', (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234', birthday: 10081978}
   User.create({
-    username: req.body.username,
     email: req.body.email,
     password: req.body.password,
     birthday: req.body.birthday
@@ -83,7 +80,6 @@ router.post('/create-account', (req, res) => {
     // .then(dbUserData => {
     //   req.session.save(() => {
     //     req.session.user_id = dbUserData.id;
-    //     req.session.username = dbUserData.username;
     //     req.session.loggedIn = true;
     //     req.session.birthday = dbUserData.birthday;
   
@@ -123,7 +119,6 @@ router.post('/login', (req, res) => {
     req.session.save(() => {
       req.session.email = dbUserData.email;
       req.session.id = dbUserData.id;
-      req.session.username = dbUserData.username;
       req.session.birthday = dbUserData.birthday;
       req.session.loggedIn = true;
   
