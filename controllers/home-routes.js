@@ -10,7 +10,7 @@ router.get('/daily-reading', (req, res) => {
   console.log(req.session)
   res.render('daily-reading', {
    email: req.session.email,
-   username: req.session.username,
+   birthday: req.session.birthday,
    login: req.session.loggedIn 
   })
 })
@@ -47,12 +47,12 @@ router.get('/logout', (req, res) => {
 //         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
 //         include: {
 //           model: User,
-//           attributes: ['username']
+//           attributes: ['birthday']
 //         }
 //       },
 //       {
 //         model: User,
-//         attributes: ['username']
+//         attributes: ['birthday']
 //       }
 //     ]
 //   })
@@ -88,12 +88,12 @@ router.get('/post/:id', (req, res) => {
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ['birthday']
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['birthday']
       }
     ]
   })
