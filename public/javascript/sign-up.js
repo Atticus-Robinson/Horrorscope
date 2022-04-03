@@ -1,9 +1,11 @@
+var signup = document.querySelector('#signup');
+
 async function signupFormHandler(event) {
   event.preventDefault();
 
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
-  const birthday = document.querySelector('.birthday-signup').id.trim();
+  const birthday = document.querySelector('#pickOne').value.trim();
 
   console.log(email);
   console.log(password);
@@ -27,6 +29,15 @@ async function signupFormHandler(event) {
     }
   }
 }
+
+function signChoice() {
+  selectEl = document.querySelector('#pickOne');
+  output = selectEl.value;
+  document.querySelector('.output').textContent = output;
+  console.log(output);
+}
+
+signup.addEventListener('click', signChoice);
 
 document
   .querySelector('.signup-form')
