@@ -83,9 +83,9 @@ router.post('/create-account', (req, res) => {
     //     req.session.loggedIn = true;
     //     req.session.birthday = dbUserData.birthday;
   
-    //     res.json(dbUserData);
-    //   });
-    // })
+        res.json(dbUserData);
+      });
+    })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
