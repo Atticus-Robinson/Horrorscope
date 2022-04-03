@@ -1,28 +1,78 @@
+<!-- bootstrap -->
+<link
+  rel='stylesheet'
+  href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'
+/>
+
 <!-- login fields -->
-<main class = "container">
-  <section class="row justify-content-center d-flex flex-wrap">
-    <div class="col-12 col-lg-4 welcome main d-flex flex-wrap">
-      <form class="signup-form justify-content-center">
-        <div class="form-field">
-          <input id="email-signup" type="email" placeholder="Email" required />
+<main class='container'>
+  <section class='row justify-content-center d-flex flex-wrap'>
+    <div class='col-12 col-lg-4 welcome main d-flex flex-wrap'>
+      <form class='signup-form justify-content-center'>
+        <div class='form-field'>
+          <input id='email-signup' type='email' placeholder='Email' required />
         </div>
-        <div class="form-field">
-          <input id="password-signup" type="password" placeholder="Password" required />
+        <div class='form-field'>
+          <input
+            id='password-signup'
+            type='password'
+            placeholder='Password'
+            required
+          />
         </div>
-        <div class="form-field">
-          <input id="birthday-signup" type="date" placeholder="Birthday {{ mm/dd/yyyy }}" required />
+        <div class='dropdown'>
+          <button
+            class='btn btn-secondary dropdown-toggle'
+            type='button'
+            id='dropdownMenu2'
+            data-toggle='dropdown'
+            aria-haspopup='true'
+            aria-expanded='false'
+          >
+            SELECT SIGN
+          </button>
+          <div class='dropdown-menu' aria-labelledby='dropdownMenu2'>
+            <button class="dropdown-item" id="taurus">Taurus: Apr 20 - May 20</button>
+              <button class="dropdown-item" id="gemini">Gemini: May 21 - Jun 20</button>
+              <button class="dropdown-item" id="cancer">Cancer: Jun 21 - Jul 22</button>
+              <button class="dropdown-item" id="leo">Leo: Jul 23 - Aug 22</button>
+              <button class="dropdown-item" id="virgo">Virgo: Aug 23 - Sep 22</button>
+              <button class="dropdown-item" id="libra">Libra: Sep 23 - Oct 22</button>
+              <button class="dropdown-item" id="scorpio">Scorpio: Oct 23 - Nov 21</button>
+              <button class="dropdown-item" id="sagittarius">Sagittarius: Nov 21 - Dec 21</button>
+              <button class="dropdown-item" id="capricorn">Capricorn: Dec 22 - Jan 19</button>
+              <button class="dropdown-item" id="aquarius">Aquarius: Jan 20 - Feb 18</button>
+              <button class="dropdown-item" id="pisces">Pisces: Feb 19 - Mar 20</button>
+              <button class="dropdown-item" id="aries">Aries: Mar 21 - Apr 19"</button>
+          </div>
         </div>
-        <div class="form-field">
-          <button id="signup" class="btn" type="submit">Sign Up</button>
+        <div class='form-field'>
+          <button id='signup' class='btn' type='submit'>SIGN UP</button>
         </div>
       </form>
-   </div>
-   <div class col-12 col-lg-8>
-    <!-- card image on right -->
-          <img class="mx-2" src="../images/card-comp.png" alt="group of tarot-style horrorscope cards" />
-        </div>
+    </div>
+    <div class col-12 col-lg-8>
+      <!-- card image on right -->
+      <img
+        class='mx-2'
+        src='../images/card-comp.png'
+        alt='group of tarot-style horrorscope cards'
+      />
+    </div>
   </section>
 </main>
 
-<script src="./javascript/sign-up.js"></script>
+<!-- script sources -->
+<script
+  src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'
+></script>
+<script
+  src='https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js'
+  integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
+  crossorigin='anonymous'
+></script>
+<script
+  src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'
+></script>
+<script src='./javascript/sign-up.js'></script>
 
