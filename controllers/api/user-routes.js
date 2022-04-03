@@ -93,7 +93,8 @@ router.post('/', (req, res) => {
 });
 
 router.post('/create-account', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234', birthday: 10081978}
+  // expects {email: 'offwego@gmail.com', password: 'passpass', birthday: 'Libra'}
+  console.log('***********')
   User.create({
     email: req.body.email,
     password: req.body.password,
