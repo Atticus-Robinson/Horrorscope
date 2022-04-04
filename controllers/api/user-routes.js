@@ -63,52 +63,29 @@ router.post('/', (req, res) => {
         req.session.birthday = dbUserData.birthday;
 
         //nodemailer transporter
-        // let transporter = nodemailer.createTransport({
-        //   service: 'gmail', //gmail domain
-        //   auth: {
-        //     user: process.env.EMAIL,
-        //     pass: process.env.PASSWORD,
-        //   }
-        // });
-        // //nodemailer
-        // let mailOptions = {
-        //   from: process.env.EMAIL, // our email address
-        //   to: dbUserData.email, // email addresss upon sign up.
-        //   subject: 'Welcome to Horrorscopes', // Subject line
-        //   text: 'Welcome to Horrorscopes! Please let us know what you think of our application as well as other features you would like to see in a future update.' // body of email
-        // };
+        let transporter = nodemailer.createTransport({
+          service: 'gmail', //gmail domain
+          auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD,
+          }
+        });
+        //nodemailer
+        let mailOptions = {
+          from: process.env.EMAIL, // our email address
+          to: dbUserData.email, // email addresss upon sign up.
+          subject: 'Welcome to Horrorscopes', // Subject line
+          text: 'Welcome to Horrorscopes! Please let us know what you think of our application as well as other features you would like to see in a future update.' // body of email
+        };
 
-        // transporter.sendMail(mailOptions, function (err, data) {
-        //   if (err) console.log(err);
-        //   else console.log('email successfully sent');
-        // });
+        transporter.sendMail(mailOptions, function (err, data) {
+          if (err) console.log(err);
+          else console.log('email successfully sent');
+        });
 
         res.json(dbUserData);
       });
     })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
-router.post('/create-account', (req, res) => {
-  // expects {email: 'offwego@gmail.com', password: 'passpass', birthday: 'Libra'}
-  console.log('***********')
-  User.create({
-    email: req.body.email,
-    password: req.body.password,
-    birthday: req.body.birthday
-  })
-    // .then(dbUserData => {
-    //   req.session.save(() => {
-    //     req.session.user_id = dbUserData.id;
-    //     req.session.loggedIn = true;
-    //     req.session.birthday = dbUserData.birthday;
-
-    //     res.json(dbUserData);
-    //   });
-    // })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
