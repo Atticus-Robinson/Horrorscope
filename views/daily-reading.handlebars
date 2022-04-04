@@ -1,30 +1,42 @@
-{{!-- daily reading  --}}
-<main class="container">
+{{! daily reading  }}
+<main class='container'>
   <h1>DAILY READING</h1>
-    <div class="row justify-content-center p-3">
-      <div class="d-flex flex-wrap justify-content-center">
-        <div class="p-2 col-4">
-{{!--  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  --}}
-          <img src="../images/cards/virgo.png" alt="virgo card" />
-        </div>
-        <div class="welcome col-8">
-          <h1 class="serif-title mt-3">Hello, Virgo.</h1>
-          <p class="dark-text bold">
-            August 23 - September 22
-{{!--  TODO: INSERT LOGGED IN USER SIGN DATES HERE (SHOULD I BUILD A DATABASE FOR SIGNS/DATES? --}}
+  <div class='row justify-content-center p-3'>
+    <div class='d-flex flex-wrap justify-content-center'>
+      <div class='p-2 col-4'>
+        {{!  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  }}
+        <img src='../images/cards/virgo.png' alt='virgo card' />
+      </div>
+      <div class='welcome col-8'>
+        {{#if birthday}}
+          <h1 class='serif-title mt-3'>Hello, {{birthday}}.</h1>
+          <p class='dark-text bold'>
+            {{birthday}}
+            {{!  TODO: INSERT LOGGED IN USER SIGN DATES HERE (SHOULD I BUILD A DATABASE FOR SIGNS/DATES? }}
           </p>
-          <p class="dark-text">
-            Your Star Rating for the Day: 
-{{!-- TODO: INSERT RANDOMLY GENERATED STAR RATING HERE --}}
-          <img src="/images/three-star.png" alt="three star day" class="star-height" /></p>
-{{!--  TODO: INSERT RANDOMLY GENERATED HORRORSCOPE HERE (HOOK TO API?) --}}
-          <p class="dark-text">
-            I know that you are pissed off and stressed out this week, but your revenge tactics suck when you are not thinking clearly. You’ve kept this problem inside for too long. So long, it’s been scratching at your bad side and it now starting to really itch. It’s time to finally get it off your chest and talk about it. I know that you would rather destroy something, but if you don’t solve the problem this week, it will be twice as bad next week.
-          </p>
-          <button>
-            <a class="no-border" href="abyss">SEND TO ABYSS</a>
-          </button>
-        </div>
+        {{/if}}
+        <p class='dark-text'>
+          Your Star Rating for the Day:
+          {{! TODO: INSERT RANDOMLY GENERATED STAR RATING HERE }}
+          <img
+            src='/images/stars/three-star.png'
+            alt='three star day'
+            class='star-height'
+          /></p>
+        {{!  TODO: INSERT RANDOMLY GENERATED HORRORSCOPE HERE (HOOK TO API?) }}
+        <p class='dark-text'>
+          I know that you are pissed off and stressed out this week, but your
+          revenge tactics suck when you are not thinking clearly. You've kept
+          this problem inside for too long. So long, it's been scratching at
+          your bad side and it now starting to really itch. It's time to finally
+          get it off your chest and talk about it. I know that you would rather
+          destroy something, but if you don't solve the problem this week, it
+          will be twice as bad next week.
+        </p>
+        <button>
+          <a class='no-border' href='abyss'>SEND TO ABYSS</a>
+        </button>
       </div>
     </div>
+  </div>
 </main>
