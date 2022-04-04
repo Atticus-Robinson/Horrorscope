@@ -23,13 +23,6 @@ Horoscope.init(
         model: 'user',
         key: 'id'
       }
-    },
-    sign_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'signs',
-        key: 'id'
-      }
     }
   },
   {

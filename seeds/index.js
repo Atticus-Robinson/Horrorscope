@@ -1,7 +1,6 @@
 const seedUsers = require('./user-seeds');
 const seedPosts = require('./post-seeds');
 const seedComments = require('./comment-seeds');
-const seedSigns = require('./sign-seeds');
 const seedHoroscope = require('./horoscope-seeds');
 
 const sequelize = require('../config/connection');
@@ -18,9 +17,6 @@ const seedAll = async () => {
 
   await seedComments();
   console.log('------- COMMENTS SEEDED ---------\n');
-
-  await seedSigns();
-  console.log('------- SIGNS SEEDED ---------\n');
 
   await seedHoroscope();
   console.log('------- HOROSCOPES SEEDED ---------\n');

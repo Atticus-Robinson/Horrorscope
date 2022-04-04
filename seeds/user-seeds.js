@@ -5,22 +5,22 @@ const userdata = [
   {
     email: 'bridgettvalet@mail.com',
     password: 'passpass',
-    birthday: 1978-10-14
+    birthday: 'Libra'
   },
   {
     email: 'wonderman@go.com',
     password: 'password123',
-    birthday: 1984-11-12
+    birthday: 'Gemini'
   },
   {
     email: 'getout@go.com',
     password: 'password123',
-    birthday: 1985-02-04
+    birthday: 'Pisces'
   },
   {
     email: 'runforestrun@kix.com',
     password: 'password123',
-    birthday: 1971-02-17
+    birthday: 'Leo'
   },
 ];
 
