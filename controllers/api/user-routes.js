@@ -50,28 +50,12 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234', birthday: 10081978}
+  // expects {email: 'rawk@rad.com', password: 'password1234', birthday: Libra}
   User.create({
     email: req.body.email,
     password: req.body.password,
     birthday: req.body.birthday
   })
-
-  // var birthday = 'Taurus';
-  // switch (birthday) {
-  //   case 'Taurus' : console.log('APR 20 - MAY 20');
-  //   break;
-
-  //   case 'Gemini' : console.log('MAY 21 - JUN 20');
-  //   break;
-
-  //   case 'Cancer' : console.log('JUN 21 - JUL 22');
-  //   break;
-
-  //   default: console.log('Unknown Sign');
-  // }
-  // console.log('exiting switch statement')
-
 
     .then((dbUserData) => {
       req.session.save(() => {
