@@ -50,28 +50,12 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234', birthday: 10081978}
+  // expects {email: 'rawk@rad.com', password: 'password1234', birthday: Libra}
   User.create({
     email: req.body.email,
     password: req.body.password,
     birthday: req.body.birthday
   })
-
-  // var birthday = 'Taurus';
-  // switch (birthday) {
-  //   case 'Taurus' : console.log('APR 20 - MAY 20');
-  //   break;
-
-  //   case 'Gemini' : console.log('MAY 21 - JUN 20');
-  //   break;
-
-  //   case 'Cancer' : console.log('JUN 21 - JUL 22');
-  //   break;
-
-  //   default: console.log('Unknown Sign');
-  // }
-  // console.log('exiting switch statement')
-
 
     .then((dbUserData) => {
       req.session.save(() => {
@@ -80,25 +64,25 @@ router.post('/', (req, res) => {
         req.session.birthday = dbUserData.birthday;
 
         //nodemailer transporter
-        // let transporter = nodemailer.createTransport({
-        //   service: 'gmail', //gmail domain
-        //   auth: {
-        //     user: process.env.EMAIL,
-        //     pass: process.env.PASSWORD,
-        //   }
-        // });
+        let transporter = nodemailer.createTransport({
+          service: 'gmail', //gmail domain
+          auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD,
+          }
+        });
         //nodemailer
-        // let mailOptions = {
-        //   from: process.env.EMAIL, // our email address
-        //   to: dbUserData.email, // email addresss upon sign up.
-        //   subject: 'Welcome to Horrorscopes', // Subject line
-        //   text: 'Welcome to Horrorscopes! Please let us know what you think of our application as well as other features you would like to see in a future update.' // body of email
-        // };
+        let mailOptions = {
+          from: process.env.EMAIL, // our email address
+          to: dbUserData.email, // email addresss upon sign up.
+          subject: 'Welcome to Horrorscopes', // Subject line
+          text: 'Welcome to Horrorscopes! Please let us know what you think of our application as well as other features you would like to see in a future update.' // body of email
+        };
 
-        // transporter.sendMail(mailOptions, function (err, data) {
-        //   if (err) console.log(err);
-        //   else console.log('email successfully sent');
-        // });
+        transporter.sendMail(mailOptions, function (err, data) {
+          if (err) console.log(err);
+          else console.log('email successfully sent');
+        });
 
         res.json(dbUserData);
       });

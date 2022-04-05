@@ -13,7 +13,7 @@ var number = Math.floor(Math.random()*starArray.length);
 
 console.log(number);
 
-document.querySelector(".star-rating").innerHTML = '<img  src="'+starArray[number]+'" />';
+document.querySelector(".star-rating").innerHTML = '<img class="star-height" src="'+starArray[number]+'" />';
 };
 
 console.log(number);

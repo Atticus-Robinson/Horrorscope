@@ -4,7 +4,6 @@
   <div class='row justify-content-center p-3'>
     <div class='d-flex flex-wrap justify-content-center'>
       <div class='p-2 col-4'>
-{{!  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  }}
         <img src={{image}} alt='sign card' />
       </div>
       <div class='welcome col-8'>
@@ -14,17 +13,10 @@
             {{date}}
           </p>
         {{/if}}
-        <p class='dark-text'>
+        <p class='dark-text bold'>
           Your Star Rating for the Day:
-          {{! TODO: INSERT RANDOMLY GENERATED STAR RATING HERE }}
           <div class="star-rating" onload='getStarArray()'></div>
-          {{!-- <img
-            src='/images/stars/three-star.png'
-            alt='three star day'
-            class='star-height'
-            id="star-rating" /> --}}
             </p>
-        {{!  TODO: INSERT RANDOMLY GENERATED HORRORSCOPE HERE (HOOK TO API?) }}
         <p class='dark-text' id='horoscopeText' onload="newHoroscope()">
         </p>
         <button class='no-border' id='abyssBtn'>SEND TO ABYSS
