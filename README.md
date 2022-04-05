@@ -66,4 +66,4 @@ https://horrorscopes-project.herokuapp.com/
 
 test by BV.
 >>>>>>> main
->>>>>>> develop-armstro
+>>>>>>> develop-armstr
