@@ -64,25 +64,25 @@ router.post('/', (req, res) => {
         req.session.birthday = dbUserData.birthday;
 
         //nodemailer transporter
-        let transporter = nodemailer.createTransport({
-          service: 'gmail', //gmail domain
-          auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD,
-          }
-        });
+        // let transporter = nodemailer.createTransport({
+        //   service: 'gmail', //gmail domain
+        //   auth: {
+        //     user: process.env.EMAIL,
+        //     pass: process.env.PASSWORD,
+        //   }
+        // });
         //nodemailer
-        let mailOptions = {
-          from: process.env.EMAIL, // our email address
-          to: dbUserData.email, // email addresss upon sign up.
-          subject: 'Welcome to Horrorscopes', // Subject line
-          text: 'Welcome to Horrorscopes! Please let us know what you think of our application as well as other features you would like to see in a future update.' // body of email
-        };
+        // let mailOptions = {
+        //   from: process.env.EMAIL, // our email address
+        //   to: dbUserData.email, // email addresss upon sign up.
+        //   subject: 'Welcome to Horrorscopes', // Subject line
+        //   text: 'Welcome to Horrorscopes! Please let us know what you think of our application as well as other features you would like to see in a future update.' // body of email
+        // };
 
-        transporter.sendMail(mailOptions, function (err, data) {
-          if (err) console.log(err);
-          else console.log('email successfully sent');
-        });
+        // transporter.sendMail(mailOptions, function (err, data) {
+        //   if (err) console.log(err);
+        //   else console.log('email successfully sent');
+        // });
 
         res.json(dbUserData);
       });
