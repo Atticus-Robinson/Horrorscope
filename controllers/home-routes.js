@@ -10,51 +10,51 @@ router.get('/daily-reading', (req, res) => {
   console.log(req.session)
   let date;
   const signArray = [{
-    sign_name: 'Taurus',
+    sign_name: 'taurus',
     sign_dates: 'APR 20 - MAY 20',
   },
   {
-    sign_name: 'Gemini',
+    sign_name: 'gemini',
     sign_dates: 'MAY 21 - JUN 20',
   },
   {
-    sign_name: 'Cancer',
+    sign_name: 'cancer',
     sign_dates: 'JUN 21 - JUL 22',
   },
   {
-    sign_name: 'Leo',
+    sign_name: 'leo',
     sign_dates: 'JUL 23 - AUG 22',
   },
   {
-    sign_name: 'Virgo',
+    sign_name: 'virgo',
     sign_dates: 'AUG 23 - SEPT 22',
   },
   {
-    sign_name: 'Libra',
+    sign_name: 'libra',
     sign_dates: 'SEPT 23 - OCT 22',
   },
   {
-    sign_name: 'Scorpio',
+    sign_name: 'scorpio',
     sign_dates: 'OCT 23 - NOV 21',
   },
   {
-    sign_name: 'Sagittarius',
+    sign_name: 'sagittarius',
     sign_dates: 'NOV 22 - DEC 21',
   },
   {
-    sign_name: 'Capricorn',
+    sign_name: 'capricorn',
     sign_dates: 'DEC 22 - JAN 19',
   },
   {
-    sign_name: 'Aquarius',
+    sign_name: 'aquarius',
     sign_dates: 'JAN 20 - FEB 18',
   },
   {
-    sign_name: 'Pisces',
+    sign_name: 'pisces',
     sign_dates: 'FEB 19 - MAR 20',
   },
   {
-    sign_name: 'Aries',
+    sign_name: 'aries',
     sign_dates: 'MAR 21 - APR 19',
   }
 
