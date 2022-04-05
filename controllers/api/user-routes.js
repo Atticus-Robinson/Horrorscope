@@ -56,6 +56,23 @@ router.post('/', (req, res) => {
     password: req.body.password,
     birthday: req.body.birthday
   })
+
+  // var birthday = 'Taurus';
+  // switch (birthday) {
+  //   case 'Taurus' : console.log('APR 20 - MAY 20');
+  //   break;
+
+  //   case 'Gemini' : console.log('MAY 21 - JUN 20');
+  //   break;
+
+  //   case 'Cancer' : console.log('JUN 21 - JUL 22');
+  //   break;
+
+  //   default: console.log('Unknown Sign');
+  // }
+  // console.log('exiting switch statement')
+
+
     .then((dbUserData) => {
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
@@ -70,7 +87,7 @@ router.post('/', (req, res) => {
         //     pass: process.env.PASSWORD,
         //   }
         // });
-        // //nodemailer
+        //nodemailer
         // let mailOptions = {
         //   from: process.env.EMAIL, // our email address
         //   to: dbUserData.email, // email addresss upon sign up.
@@ -86,29 +103,6 @@ router.post('/', (req, res) => {
         res.json(dbUserData);
       });
     })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
-router.post('/create-account', (req, res) => {
-  // expects {email: 'offwego@gmail.com', password: 'passpass', birthday: 'Libra'}
-  console.log('***********')
-  User.create({
-    email: req.body.email,
-    password: req.body.password,
-    birthday: req.body.birthday
-  })
-    // .then(dbUserData => {
-    //   req.session.save(() => {
-    //     req.session.user_id = dbUserData.id;
-    //     req.session.loggedIn = true;
-    //     req.session.birthday = dbUserData.birthday;
-
-    //     res.json(dbUserData);
-    //   });
-    // })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
