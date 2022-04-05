@@ -4,7 +4,7 @@
   <div class='row justify-content-center p-3'>
     <div class='d-flex flex-wrap justify-content-center'>
       <div class='col-4'>
-        {{!  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  }}
+{{!  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  }}
         <img src='../images/cards/taurus.png' alt='taurus card' />
       </div>
       <div class='welcome col-8'>
@@ -14,43 +14,29 @@
           thoughts on the day and universe at large in one place. After you have
           saved your Daily Reading to the Abyss, it will appear here.
         </p>
-        {{!  TODO: MAKE SURE LOGGED IN USER SIGN POPULATES }}
         <p class='dark-text'>
           Add comments ("My aura was FAR from dim today!"), edit your comments
-          or delete them altogether. Its your safe space. Make it your own.
+          or delete them altogether. Its your safe space, {{birthday}}. Make it your own.
         </p>
       </div>
-      {{!  TODO: SAVED USER DATA GOES HERE  }}
+{{!  TODO: SAVED USER DATA GOES HERE  }}
+  {{#each posts as |post|}}
        <div class='welcome col-5 mt-3 mr-2'>
         <h2 class='serif-title mt-3 left'>3.30.2022 @ 7:42p</h2>
         <p class='dark-text'>
           Your Star Rating for the Day:
           <img
-            src='/images/three-star.png'
+            src='/images/stars/three-star.png'
             alt='three star day'
             class='star-height'
           /></p>
         <p class='dark-text'>
-            I know that you are pissed off and stressed out this week, but your revenge tactics suck when you are not thinking clearly. You’ve kept this problem inside for too long. It’s time to finally get it off your chest and talk about it. I know that you would rather destroy something, but if you don’t solve the problem this week, it will be twice as bad next week.
+            {{post.description}}
         </p>
         <button>COMMENTS</button>
         <button class='mx-2'>DELETE</button>
       </div>
-      <div class='welcome col-5 mt-3 ml-2'>
-        <h2 class='serif-title mt-3 left'>3.28.2022 @ 11:19a</h2>
-        <p class='dark-text'>
-          Your Star Rating for the Day:
-          <img
-            src='/images/four-star.png'
-            alt='four star day'
-            class='star-height'
-          /></p>
-        <p class='dark-text'>
-          You consider yourself a born leader. Others think you are an idiot. You are vain and cannot tolerate criticism. Your arrogance is disgusting. You are the reason butterfly hairpins and parachute pants have made a comeback. Don't sleep, Shriners want to eat you. If you want to connect with young folks, just provide them with solid wi-fi.
-        </p>
-        <button>COMMENTS</button>
-        <button class='mx-2'>DELETE</button>
-      </div>
+      {{/each}}
      </div>
     </div>
 </main>

@@ -42,6 +42,6 @@ app.set("view engine", "handlebars");
 app.use(routes);
 
 // connect database to server using Sequelize
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Ready to rock on port 3001.`));
 });

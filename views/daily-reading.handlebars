@@ -4,34 +4,37 @@
   <div class='row justify-content-center p-3'>
     <div class='d-flex flex-wrap justify-content-center'>
       <div class='p-2 col-4'>
-        {{!  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  }}
-        <img src='/images/cards/pisces.png' alt='sign card' />
+{{!  TODO: MAKE SURE LOGGED IN USER CARD POPULATES HERE  }}
+        <img src={{image}} alt='sign card' />
       </div>
       <div class='welcome col-8'>
-        {{#if birthday}}
+        {{#if login}}
           <h1 class='serif-title mt-3'>Hello, {{birthday}}.</h1>
           <p class='dark-text bold'>
-            {{birthday}}
-            {{!  TODO: INSERT LOGGED IN USER SIGN DATES HERE (SHOULD I BUILD A DATABASE FOR SIGNS/DATES? }}
+            {{date}}
           </p>
         {{/if}}
         <p class='dark-text'>
           Your Star Rating for the Day:
           {{! TODO: INSERT RANDOMLY GENERATED STAR RATING HERE }}
-          <img
+          <div class="star-rating" onload='getStarArray()'></div>
+          {{!-- <img
             src='/images/stars/three-star.png'
             alt='three star day'
             class='star-height'
-          /></p>
+            id="star-rating" /> --}}
+            </p>
         {{!  TODO: INSERT RANDOMLY GENERATED HORRORSCOPE HERE (HOOK TO API?) }}
-        <p class='dark-text' id='horoscopeText'>
+        <p class='dark-text' id='horoscopeText' onload="newHoroscope()">
         </p>
-        <button>
-          <a class='no-border' href='abyss'>SEND TO ABYSS</a>
+        <button class='no-border' id='abyssBtn'>SEND TO ABYSS
         </button>
       </div>
     </div>
   </div>
 </main>
 
-<script src='./javascript/assign-card.js'></script>
+{{!-- <script src='./javascript/assign-card.js'></script> --}}
+<script src='./javascript/star-assign.js'></script>
+<script src="./javascript/pull-horoscope.js"></script>
+<script src="./javascript/add-post.js"></script>
