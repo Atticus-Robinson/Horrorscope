@@ -55,7 +55,7 @@ https://drive.google.com/file/d/1fKtyaDHihfeGO4aavFIWHFeuzvFXfGLM/view
 =======
 ## Deployed URL
 ---------------------
-https://horrorscopes-project.herokuapp.com/
+https://horrorscopes2.herokuapp.com/
 
 ## Screenshot
 ---------------------
