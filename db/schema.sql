@@ -1,8 +1,8 @@
 SET FOREIGN_KEY_CHECKS=0;
 
-TRUNCATE signs;
+DELETE TABLE signs;
 
-TRUNCATE horoscope;
+DELETE TABLE horoscope;
 
 DROP DATABASE IF EXISTS user_db;
 
