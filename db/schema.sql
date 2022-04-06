@@ -1,6 +1,6 @@
-DELETE TABLE signs;
+DELETE signs;
 
-DELETE TABLE horoscope;
+DELETE horoscope;
 
 DROP DATABASE IF EXISTS user_db;
 
