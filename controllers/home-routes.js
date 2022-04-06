@@ -10,7 +10,7 @@ router.get('/daily-reading', (req, res) => {
   console.log(req.session)
   let date;
   const signArray = [{
-    sign_name: 'taurus',
+    sign_name: 'bull',
     sign_dates: 'APR 20 - MAY 20',
   },
   {
