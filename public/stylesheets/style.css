@@ -29,6 +29,7 @@ main {
 
 h1 {
   text-align: left;
+  text-transform: capitalize;
 }
 
 h2 {
